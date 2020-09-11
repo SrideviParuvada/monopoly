@@ -1,0 +1,109 @@
+space_01:
+  name: 'Mediterranean Avenue'
+  type: property
+  value: 60
+
+space_02:
+  name: 'Baltic Avenue'
+  type: property
+  value: 60
+
+space_03:
+  name: 'Oriental Avenue'
+  type: property
+  value: 100
+
+space_04:
+  name: 'Vermont Avenue'
+  type: property
+  value: 100
+
+space_05:
+  name: 'Connecticut Avenue'
+  type: property
+  value: 120
+
+space_06:
+  name: 'St.Charles Place'
+  type: property
+  value: 140
+
+space_07:
+  name: 'States Avenue'
+  type: property
+  value: 140
+
+space_08:
+  name: 'Virginia Avenue'
+  type: property
+  value: 160
+
+space_09:
+  name: 'St. James Place'
+  type: property
+  value: 180
+
+space_10:
+  name: 'Tennessee Avenue'
+  type: property
+  value: 180
+
+space_11:
+  name: 'New York Avenue'
+  type: property
+  value: 200
+
+space_12:
+  name: 'Kentucky Avenue'
+  type: property
+  value: 220
+
+space_13:
+  name: 'Indiana Avenue'
+  type: property
+  value: 220
+
+space_14:
+  name: 'Illinois Avenue'
+  type: property
+  value: 240
+
+space_15:
+  name: 'Atlantic Avenue'
+  type: property
+  value: 260
+
+space_16:
+  name: 'Ventnor Avenue'
+  type: property
+  value: 260
+
+space_17:
+   name: 'Marvin Gardens'
+   type: property
+   value: 280
+
+space_18:
+   name: 'Pacific Avenue'
+   type: property
+   value: 300
+
+space_19:
+   name: 'North Carolina Avenue'
+   type: property
+   value: 300
+
+space_20:
+   name: 'Pennsylvania Avenue'
+   type: property
+   value: 320
+
+space_21:
+   name: 'Park Place'
+   type: property
+   value: 350
+
+space_22:
+   name: 'Boardwalk'
+   type: property
+   value: 400
