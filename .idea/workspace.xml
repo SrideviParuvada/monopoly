@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0e03440-0554-43e7-837d-85fcfaa89114" name="Default Changelist" comment="">
+    <list default="true" id="d8ae4249-6e06-4bb4-a6de-92b341d05285" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monopoly_game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopoly_game.rb" afterDir="false" />
     </list>
@@ -31,7 +13,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1dVij0EtMgzfwWUKUgsbGhe6Ir6" />
+  <component name="ProjectId" id="1hNlPcjzehWBXjdslD2Zy7BxIuQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,66 +25,6 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
-  <component name="RunManager" selected="Ruby.Game">
-    <configuration name="Unnamed" type="CucumberRunConfigurationType" factoryName="Cucumber" nameIsGenerated="true">
-      <module name="monopoly" />
-      <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="true" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="ruby-2.6.6-p146" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Game" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="monopoly" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/Game.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Cucumber.Unnamed" />
-      <item itemvalue="Ruby.Game" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Ruby.Game" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="SvnConfiguration">
@@ -110,117 +32,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c0e03440-0554-43e7-837d-85fcfaa89114" name="Default Changelist" comment="" />
-      <created>1592516792247</created>
+      <changelist id="d8ae4249-6e06-4bb4-a6de-92b341d05285" name="Default Changelist" comment="" />
+      <created>1599859407195</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1592516792247</updated>
-      <workItem from="1592516793413" duration="5000" />
-      <workItem from="1592516804135" duration="1325000" />
-      <workItem from="1593186399557" duration="2008000" />
-      <workItem from="1593197052436" duration="5000" />
-      <workItem from="1593211480902" duration="20800000" />
-      <workItem from="1593466762110" duration="1844000" />
-      <workItem from="1593730166519" duration="10640000" />
-      <workItem from="1594262571550" duration="5685000" />
-      <workItem from="1594667473564" duration="4172000" />
-      <workItem from="1595029014147" duration="9578000" />
-      <workItem from="1595271826609" duration="4051000" />
-      <workItem from="1595630782297" duration="6096000" />
-      <workItem from="1595875468355" duration="10685000" />
-      <workItem from="1596228505564" duration="7525000" />
-      <workItem from="1597071003780" duration="6801000" />
-      <workItem from="1597083269753" duration="1476000" />
-      <workItem from="1597093555159" duration="608000" />
-      <workItem from="1597435675435" duration="7743000" />
-      <workItem from="1597690819157" duration="10000" />
-      <workItem from="1597690833814" duration="4082000" />
-      <workItem from="1597700743214" duration="541000" />
-      <workItem from="1598289198271" duration="9838000" />
-      <workItem from="1598847721677" duration="13507000" />
-      <workItem from="1599257853450" duration="6818000" />
-      <workItem from="1599583971023" duration="63000" />
-      <workItem from="1599607747529" duration="4769000" />
-      <workItem from="1599756202479" duration="37000" />
-      <workItem from="1599857439020" duration="534000" />
+      <updated>1599859407195</updated>
+      <workItem from="1599859410713" duration="9646000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="2334" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593214866608">
-      <screen x="1920" y="0" width="1920" height="1160" />
-    </state>
-    <state x="2334" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1593214866608" />
-    <state width="1877" height="396" key="GridCell.Tab.0.bottom" timestamp="1593459105252">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="396" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1160@0.0.1536.824" timestamp="1593459105252" />
-    <state width="1877" height="331" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1593215800147" />
-    <state width="1877" height="396" key="GridCell.Tab.0.center" timestamp="1593459105252">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="396" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1160@0.0.1536.824" timestamp="1593459105252" />
-    <state width="1877" height="331" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1593215800147" />
-    <state width="1877" height="396" key="GridCell.Tab.0.left" timestamp="1593459105252">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="396" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1160@0.0.1536.824" timestamp="1593459105252" />
-    <state width="1877" height="331" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1593215800147" />
-    <state width="1877" height="396" key="GridCell.Tab.0.right" timestamp="1593459105252">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="396" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1160@0.0.1536.824" timestamp="1593459105252" />
-    <state width="1877" height="331" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1593215800147" />
-    <state width="1877" height="396" key="GridCell.Tab.1.bottom" timestamp="1593459105253">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1160@0.0.1536.824" timestamp="1593459105253" />
-    <state width="1877" height="396" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1593215105609" />
-    <state width="1877" height="396" key="GridCell.Tab.1.center" timestamp="1593459105253">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1160@0.0.1536.824" timestamp="1593459105252" />
-    <state width="1877" height="396" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1593215105609" />
-    <state width="1877" height="396" key="GridCell.Tab.1.left" timestamp="1593459105252">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1160@0.0.1536.824" timestamp="1593459105252" />
-    <state width="1877" height="396" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1593215105609" />
-    <state width="1877" height="396" key="GridCell.Tab.1.right" timestamp="1593459105253">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1160@0.0.1536.824" timestamp="1593459105253" />
-    <state width="1877" height="396" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1593215105609" />
-    <state x="2381" y="224" key="SettingsEditor" timestamp="1593535786315">
-      <screen x="1920" y="0" width="1920" height="1160" />
-    </state>
-    <state x="2381" y="224" key="SettingsEditor/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1593535786315" />
-    <state x="2587" y="313" width="586" height="592" key="find.popup" timestamp="1597693742775">
-      <screen x="1920" y="0" width="1920" height="1160" />
-    </state>
-    <state x="534" y="222" width="548" height="558" key="find.popup/0.0.1536.824/1920.0.1920.1160@0.0.1536.824" timestamp="1597356957139" />
-    <state x="2587" y="313" width="586" height="592" key="find.popup/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1597693742775" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1595827336861">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595827336861" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/monopoly@Game.rcov" NAME="Game Coverage Results" MODIFIED="1593215263428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="monopoly" />
   </component>
 </project>
