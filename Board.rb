@@ -67,12 +67,12 @@ class Board
 end
 
 class Player
-  attr_accessor :location, :name, :player_cash, :player_properties
+  attr_accessor :location, :name, :cash, :player_properties
   include Dice
   def initialize(name)
     @location = 0
     @name = name
-    @player_cash = 1500
+    @cash = 1500
     @player_properties = Array.new
   end
   # def move(board_size)
@@ -153,16 +153,16 @@ until user_input == 'n'
     user_input2 = nil
     user_input3 = nil
     until user_input1 == 'n'
-      puts "#{player.name}'s position is '#{player.location.to_i}' and is on property '#{board.spaces[player.location.to_i].name}' and has #{player.player_cash} cash"
+      puts "#{player.name}'s position is '#{player.location.to_i}' and is on property '#{board.spaces[player.location.to_i].name}' and has #{player.cash} cash"
       puts "#{player.name} is rolling the dice"
       player.location, is_double = player_turn.move(board.spaces.size, player.location)
-      puts "#{player.name}'s position is '#{player.location.to_i}' and is on property '#{board.spaces[player.location.to_i].name}' and has #{player.player_cash} cash"
+      puts "#{player.name}'s position is '#{player.location.to_i}' and is on property '#{board.spaces[player.location.to_i].name}' and has #{player.cash} cash"
       if @available_properties.include?(board.spaces[player.location.to_i].name)
-        puts "#{player.name}, the property you are on is '#{board.spaces[player.location.to_i].name}', it is available to buy, it costs '#{board.spaces[player.location.to_i].value}', and you have #{player.player_cash} cash, do you want to buy this property? y/n"
+        puts "#{player.name}, the property you are on is '#{board.spaces[player.location.to_i].name}', it is available to buy, it costs '#{board.spaces[player.location.to_i].value}', and you have #{player.cash} cash, do you want to buy this property? y/n"
         user_input3 = gets.strip
         if user_input3 =='y'
-          @available_properties, player.player_properties, player.player_cash = player_turn.buy(@available_properties, board.spaces[player.location.to_i].name, board.spaces[player.location.to_i].value, player.player_properties, player.player_cash)
-          puts "#{player.name}, now you own #{player.player_properties} and you still have cash #{player.player_cash}"
+          @available_properties, player.player_properties, player.cash = player_turn.buy(@available_properties, board.spaces[player.location.to_i].name, board.spaces[player.location.to_i].value, player.player_properties, player.cash)
+          puts "#{player.name}, now you own #{player.player_properties} and you still have cash #{player.cash}"
         end
       end
       if (is_double)
@@ -170,11 +170,11 @@ until user_input == 'n'
         user_input2 = gets.strip
         if user_input2 == 'y'
           player.location, is_double = player_turn.move(board.spaces.size, player.location)
-          puts "#{player.name}, the property you are on is '#{board.spaces[player.location.to_i].name}', it is available to buy, it costs '#{board.spaces[player.location.to_i].value}', and you have #{player.player_cash} cash, do you want to buy this property? y/n"
+          puts "#{player.name}, the property you are on is '#{board.spaces[player.location.to_i].name}', it is available to buy, it costs '#{board.spaces[player.location.to_i].value}', and you have #{player.cash} cash, do you want to buy this property? y/n"
           user_input3 = gets.strip
           if user_input3 =='y'
-              @available_properties, player.player_properties, player.player_cash = player_turn.buy(@available_properties, board.spaces[player.location.to_i].name, board.spaces[player.location.to_i].value, player.player_properties, player.player_cash)
-              puts "#{player.name}, now you own #{player.player_properties} and you still have cash #{player.player_cash}"
+              @available_properties, player.player_properties, player.cash = player_turn.buy(@available_properties, board.spaces[player.location.to_i].name, board.spaces[player.location.to_i].value, player.player_properties, player.cash)
+              puts "#{player.name}, now you own #{player.player_properties} and you still have cash #{player.cash}"
           end
         end
       end
@@ -187,7 +187,7 @@ until user_input == 'n'
 end
 
 players.each{ |player|
-  puts "At the end of the game #{player.name} have #{player.player_properties} and #{player.player_cash} cash"
+  puts "At the end of the game #{player.name} have #{player.player_properties} and #{player.cash} cash"
 }
 
 #direction: pass the the player to method turn, stay in that method and do everything (right now is just move)

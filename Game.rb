@@ -106,12 +106,12 @@ end
 
 
 class Player
-  attr_reader :player_name, :player_cash, :player_current_position, :player_properties, :is_double, :user_choice
+  attr_reader :player_name, :cash, :player_current_position, :player_properties, :is_double, :user_choice
   include Actions
 
   def initialize(name)
     @player_name = name
-    @player_cash = 1500
+    @cash = 1500
     @player_current_position = 0
     @player_properties = Array.new
     @is_double
@@ -126,27 +126,27 @@ class Player
     current_space_value = board.spaces[@player_current_position].value
     current_space_value = board.spaces[@player_current_position]
     if available_properties.include?(current_space)
-      if @player_cash > current_space_value
-        puts "#{@player_name}, you moved to #{current_space}, it is available for buying, it costs #{current_space_value} and you have #{@player_cash} do you want buy? Yes/No"
+      if @cash > current_space_value
+        puts "#{@player_name}, you moved to #{current_space}, it is available for buying, it costs #{current_space_value} and you have #{@cash} do you want buy? Yes/No"
         @user_choice = gets.strip.to_s.strip.downcase
         if @user_choice == 'yes'
           @user_choice = 'Buy'
         end
       end
     else
-      puts "#{@player_name} you moved to #{current_space} and this property belongs to #{banker.property_tracker["#{current_space}"]}, you need to pay rent, rent is: , you have total cash: #{@player_cash}"
+      puts "#{@player_name} you moved to #{current_space} and this property belongs to #{banker.property_tracker["#{current_space}"]}, you need to pay rent, rent is: , you have total cash: #{@cash}"
       @user_choice = 'Pay Rent'
     end
 
     case @user_choice
     when 'Buy'
-      @player_properties, available_properties, @player_cash, @banker_cash = buy(@player_properties, @player_cash, @player_name, available_properties, current_space, current_space_value, banker)
-      puts "#{@player_name}'s properties #{player_properties} and your available cash is #{@player_cash}"
+      @player_properties, available_properties, @cash, @banker_cash = buy(@player_properties, @cash, @player_name, available_properties, current_space, current_space_value, banker)
+      puts "#{@player_name}'s properties #{player_properties} and your available cash is #{@cash}"
       puts "Banker has: #{banker.property_tracker}"
       puts "Banker cash in buy: #{@banker_cash}"
     when 'Pay Rent'
-      @player_cash, @banker_cash  = pay_rent(@player_cash, current_space_value, banker)
-      puts "Banker cash:#{@banker_cash} and players cash: #{@player_cash}"
+      @cash, @banker_cash  = pay_rent(@cash, current_space_value, banker)
+      puts "Banker cash:#{@banker_cash} and players cash: #{@cash}"
     end
     if @is_double == true
       turn(board, banker, available_properties)
