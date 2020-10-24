@@ -21,6 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d8ae4249-6e06-4bb4-a6de-92b341d05285" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/classes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopoly_game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopoly_game.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_monopoly.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test_monopoly.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +62,21 @@
       <workItem from="1600108881596" duration="9714000" />
       <workItem from="1600642352794" duration="2561000" />
       <workItem from="1600715862724" duration="3966000" />
-      <workItem from="1601079631967" duration="1833000" />
+      <workItem from="1601079631967" duration="1971000" />
+      <workItem from="1601093514754" duration="4578000" />
+      <workItem from="1601316819723" duration="5343000" />
+      <workItem from="1601675212565" duration="8618000" />
+      <workItem from="1601871538447" duration="2374000" />
+      <workItem from="1601915044361" duration="2350000" />
+      <workItem from="1601924513883" duration="3172000" />
+      <workItem from="1601930627047" duration="3092000" />
+      <workItem from="1602015096401" duration="607000" />
+      <workItem from="1602889633335" duration="990000" />
+      <workItem from="1602989133436" duration="606000" />
+      <workItem from="1602995515045" duration="1290000" />
+      <workItem from="1603075801729" duration="15648000" />
+      <workItem from="1603216563865" duration="13000" />
+      <workItem from="1603486515977" duration="10289000" />
     </task>
     <servers />
   </component>
@@ -77,5 +94,12 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="534" y="222" width="549" height="534" key="find.popup" timestamp="1603146613395">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="2587" y="313" width="586" height="534" key="find.popup/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603076927481" />
+    <state x="534" y="222" width="549" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603146613395" />
   </component>
 </project>
