@@ -16,12 +16,8 @@ end
 user_input = nil
 until exit_text(user_input)
   players.each { |player|
-      is_double = true
-      begin
-        is_double = turn(player)
-        puts "Your turn again #{player.name} as you rolled double"
-      end until is_double == false
-      owned_properties(player.name)
+     turn(player)
+     properties_owned_by_player(player.name)
    }
 end
 

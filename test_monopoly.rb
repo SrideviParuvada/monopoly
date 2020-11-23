@@ -128,9 +128,9 @@ class TestMonopoly < Minitest::Test
   #   assert_equal(Property, actual.first.class)
   # end
   #Notable to do this test either
-  def test_owned_properties
+  def test_properties_owned_by_player
     BOARD.first.owner = @name
-    actual = owned_properties(@name)
+    actual = properties_owned_by_player(@name)
     assert_equal(Array, actual.class)
     assert_equal(false, actual.empty?)
     assert_equal(1, actual.length)
