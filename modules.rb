@@ -55,14 +55,29 @@ module Monopoly
     end
   end
 
-  def players_options(player:, has_rolled:, is_double: )
+  # def players_options(player:, has_rolled:, is_double: )
+  #   property_value = BOARD[player.position].value
+  #   owner = BOARD[player.position].owner
+  #   options = ['End Game']
+  #   options << 'Buy' if owner == 'Banker' and player.cash >= property_value
+  #   options << 'Roll' unless has_rolled
+  #   options << 'End Turn' if (has_rolled && !is_double)
+  #   options << 'Skip Buying' if (has_rolled && is_double)
+  #   puts "#{player.name}, you have following options to chose from"
+  #   options.each_with_index do |value, index|
+  #     puts "#{index+1}:#{value}"
+  #   end
+  #   options
+  # end
+  #
+
+  def players_options(player:, has_rolled:)
     property_value = BOARD[player.position].value
     owner = BOARD[player.position].owner
     options = ['End Game']
     options << 'Buy' if owner == 'Banker' and player.cash >= property_value
     options << 'Roll' unless has_rolled
-    options << 'End Turn' if (has_rolled && !is_double)
-    options << 'Skip Buying' if (has_rolled && is_double)
+    options << 'End Turn' if has_rolled
     puts "#{player.name}, you have following options to chose from"
     options.each_with_index do |value, index|
       puts "#{index+1}:#{value}"
@@ -76,6 +91,7 @@ module Monopoly
   end
 
   def actions(action:, player:, available_options:)
+    roll_output = nil
     case available_options[action.to_i-1]
     when 'Buy'
       buy_property(player)
@@ -84,22 +100,12 @@ module Monopoly
     when 'End Game'
       exit_text(exit)
     when 'Roll'
-      is_double = nil
-      until (is_double == false)
         roll_output = roll
-        is_double = roll_output[:is_double]
         move_player(player: player, move: roll_output[:dice_roll])
-        players_current_information(player: player)
-        options = players_options(player:player, has_rolled:true, is_double:is_double )
-        puts "Please pick one of the options, enter number"
-        user_input = gets.strip
-        actions(action: user_input, player: player, available_options: options)
-      end
-    when 'Skip Buying'
-      puts "In skip buying"
     else
       puts "Invalid input"
     end
+    roll_output
   end
 
   def players_current_information(player: )
@@ -113,10 +119,11 @@ module Monopoly
   end
 
   def turn (player)
+    has_rolled = false
     begin
       players_current_information(player: player)
       properties_owned_by_player(player.name)
-      options = players_options(player: player, has_rolled: false, is_double: nil)
+      options = players_options(player: player, has_rolled: has_rolled)
       begin
         puts "Please pick one of the options available for you #{player.name}"
         user_input = gets.strip
@@ -124,8 +131,9 @@ module Monopoly
           puts "Invalid choice"
         end
       end until user_input.to_i.between?(1, options.length+1)
-      actions(action: user_input, player: player, available_options: options)
-    end until (user_input.to_i == 2 || user_input.to_i == 3)
+      roll_output = actions(action: user_input, player: player, available_options: options)
+      has_rolled = true unless (roll_output.nil? || roll_output[:is_double])
+    end until (options[user_input.to_i-1] == 'End Turn')
   end
 
   def exit_text(user_input)
