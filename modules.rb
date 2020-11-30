@@ -12,10 +12,8 @@ module Monopoly
 
    def create_board(file='Board.yml')
     spaces = YAML.load_file(file)
-    # puts "Spaces: #{spaces}"
     spaces.transform_keys!(&:to_sym)
     spaces.each_value { |value| value.transform_keys!(&:to_sym) }
-    # puts "Space: #{spaces}"
     create_properties(spaces)
   end
 
@@ -40,7 +38,14 @@ module Monopoly
     total_roll = num1+num2
     puts "Dice roll: #{total_roll}"
     # if num1 == num2 then set double to true
-    {dice_roll: total_roll, is_double: num1 == num2 }
+    if num1 == num2
+      puts "It's a double"
+      is_double = true
+    else
+      is_double = false
+    end
+      #{dice_roll: total_roll, is_double: num1 == num2 }
+    {dice_roll: total_roll, is_double: is_double }
   end
 
   def move_player(player:, move:)
@@ -48,38 +53,21 @@ module Monopoly
     if player.position  > BOARD.length-1
       player.position -= BOARD.length
     end
-    players_current_information(player)
-    players_options(player: player)
-    puts "Please pick one of the options available for you #{player.name}"
-    user_input = gets.strip
-    actions(action: user_input, player: player)
   end
 
-  def players_options(player:)
-    name = player.name
-    cash = player.cash
+  def players_options(player:, has_rolled:, is_double: )
     property_value = BOARD[player.position].value
     owner = BOARD[player.position].owner
-      if owner == 'Banker'
-        if cash >= property_value
-          puts "Available actions are:"
-          puts "1: Buy"
-          puts "2: End Turn"
-          puts "3: Stop Game"
-          puts "4: Roll"
-        end
-      else if owner !=name
-             puts "#{owner} owns the property you are currently on #{name} so you have to pay rent"
-             puts "Available actions are:"
-             puts "3: Stop Game"
-             puts "5: Pay rent"
-           else
-             puts "Available actions are:"
-             puts "2: End Turn"
-             puts "3: Stop Game"
-             puts "4: Roll"
-           end
-      end
+    options = ['End Game']
+    options << 'Buy' if owner == 'Banker' and player.cash >= property_value
+    options << 'Roll' unless has_rolled
+    options << 'End Turn' if (has_rolled && !is_double)
+    options << 'Skip Buying' if (has_rolled && is_double)
+    puts "#{player.name}, you have following options to chose from"
+    options.each_with_index do |value, index|
+      puts "#{index+1}:#{value}"
+    end
+    options
   end
 
   def buy_property(player)
@@ -87,40 +75,56 @@ module Monopoly
     BOARD[player.position].owner = player.name
   end
 
-  def actions(action:, player:)
-    case action.to_i
-    when 1
+  def actions(action:, player:, available_options:)
+    case available_options[action.to_i-1]
+    when 'Buy'
       buy_property(player)
-    when 2
+    when 'End Turn'
       puts "in end turn"
-    when 3
+    when 'End Game'
       exit_text(exit)
-    when 4
-      roll_output = roll
-      move_player(player: player, move: roll_output[:dice_roll])
-      if roll_output[:is_double]
-        puts "it is double so rolling again: #{roll_output[:is_double]}"
-        actions(action: 4, player: player)
+    when 'Roll'
+      is_double = nil
+      until (is_double == false)
+        roll_output = roll
+        is_double = roll_output[:is_double]
+        move_player(player: player, move: roll_output[:dice_roll])
+        players_current_information(player: player)
+        options = players_options(player:player, has_rolled:true, is_double:is_double )
+        puts "Please pick one of the options, enter number"
+        user_input = gets.strip
+        actions(action: user_input, player: player, available_options: options)
       end
+    when 'Skip Buying'
+      puts "In skip buying"
     else
       puts "Invalid input"
     end
   end
 
-  def players_current_information(player)
+  def players_current_information(player: )
     #Below command should clear the board before displaying next puts statement but it is not working as anticipated
     system 'clear'
-    puts "Current player: #{player.name}  has cash:#{player.cash}  and is on position: #{BOARD[player.position].name}  which costs: #{BOARD[player.position].value} and this property owned by: #{BOARD[player.position].owner}"
+    puts  "Current player:            #{player.name}
+    Has:                   $#{player.cash}
+    Is on:                 #{BOARD[player.position].name}
+    Which costs:           #{BOARD[player.position].value}
+    this property owned by:#{BOARD[player.position].owner}"
   end
 
   def turn (player)
     begin
-      players_current_information(player)
+      players_current_information(player: player)
       properties_owned_by_player(player.name)
-      players_options(player: player)
-      puts "Please pick one of the options available for you #{player.name}"
-      user_input = gets.strip
-      actions(action: user_input, player: player)
+      options = players_options(player: player, has_rolled: false, is_double: nil)
+      begin
+        puts "Please pick one of the options available for you #{player.name}"
+        user_input = gets.strip
+        if user_input.to_i < 1 || user_input.to_i > options.length+1
+          puts "Invalid choice"
+        end
+      end until user_input.to_i.between?(1, options.length+1)
+      actions(action: user_input, player: player, available_options: options)
     end until (user_input.to_i == 2 || user_input.to_i == 3)
   end
 
