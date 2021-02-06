@@ -4,7 +4,7 @@ require_relative './modules.rb'
 
 class TestProperty < Minitest::Test
   def setup
-    @property = Property.new(name: 'Portland', value: 100 )
+    @property = BoardSpace.new(name: 'Portland', value: 100 )
   end
 
   def test_name_read
@@ -24,11 +24,11 @@ class TestProperty < Minitest::Test
   end
 
   def test_name_is_required
-    assert_raises(ArgumentError) {Property.new(value: 150)}
+    assert_raises(ArgumentError) {BoardSpace.new(value: 150)}
   end
 
   def test_value_is_required
-    assert_raises(ArgumentError) {Property.new(name: 'Seattle')}
+    assert_raises(ArgumentError) {BoardSpace.new(name: 'Seattle')}
   end
 
   def test_default_owner

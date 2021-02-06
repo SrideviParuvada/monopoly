@@ -2,141 +2,124 @@ module Monopoly
   extend self
   require 'yaml'
 
-  def create_properties(spaces)
+  def create_board(file = 'Board.yml')
+    spaces = YAML.load_file(file)
+    spaces.transform_keys!(&:to_sym)
+    spaces.each_value { |value| value.transform_keys!(&:to_sym) }
     board = []
-    spaces.each_value do |value|
-      board << Property.new(**value)
+    spaces.each do |space|
+      board << BoardSpace.new(**space[1])
     end
     board
   end
 
-   def create_board(file='Board.yml')
-    spaces = YAML.load_file(file)
-    spaces.transform_keys!(&:to_sym)
-    spaces.each_value { |value| value.transform_keys!(&:to_sym) }
-    create_properties(spaces)
-  end
-
   BOARD = create_board
 
-  def properties_owned_by_player(player_name)
-    properties_owned_by_player = []
-    BOARD.each do |board|
-      if board.owner == player_name
-        properties_owned_by_player << board.name
-      end
-    end
-    puts "Player #{player_name} owns: #{properties_owned_by_player}"
-    properties_owned_by_player
-  end
-
-  def roll(min:1, max:6)
-    num1 = rand(min..max)
-    num2 = rand(min..max)
-    puts "Dice 1: #{num1}"
-    puts "Dice 2: #{num2}"
-    total_roll = num1+num2
-    puts "Dice roll: #{total_roll}"
-    # if num1 == num2 then set double to true
-    if num1 == num2
-      puts "It's a double"
-      is_double = true
-    else
-      is_double = false
-    end
-      #{dice_roll: total_roll, is_double: num1 == num2 }
-    {dice_roll: total_roll, is_double: is_double }
-  end
-
-  def move_player(player:, move:)
-    player.position += move.to_i
-    if player.position  > BOARD.length-1
-      player.position -= BOARD.length
-    end
-  end
-
-  # def players_options(player:, has_rolled:, is_double: )
-  #   property_value = BOARD[player.position].value
-  #   owner = BOARD[player.position].owner
-  #   options = ['End Game']
-  #   options << 'Buy' if owner == 'Banker' and player.cash >= property_value
-  #   options << 'Roll' unless has_rolled
-  #   options << 'End Turn' if (has_rolled && !is_double)
-  #   options << 'Skip Buying' if (has_rolled && is_double)
-  #   puts "#{player.name}, you have following options to chose from"
-  #   options.each_with_index do |value, index|
-  #     puts "#{index+1}:#{value}"
-  #   end
-  #   options
-  # end
-  #
-
-  def players_options(player:, has_rolled:)
-    property_value = BOARD[player.position].value
-    owner = BOARD[player.position].owner
-    options = ['End Game']
-    options << 'Buy' if owner == 'Banker' and player.cash >= property_value
-    options << 'Roll' unless has_rolled
-    options << 'End Turn' if has_rolled
-    puts "#{player.name}, you have following options to chose from"
-    options.each_with_index do |value, index|
-      puts "#{index+1}:#{value}"
-    end
-    options
-  end
-
-  def buy_property(player)
-    player.cash -= BOARD[player.position].value
-    BOARD[player.position].owner = player.name
-  end
-
   def actions(action:, player:, available_options:)
-    roll_output = nil
-    case available_options[action.to_i-1]
+    return_from_action = nil
+    case available_options[action.to_i - 1]
     when 'Buy'
       buy_property(player)
     when 'End Turn'
-      puts "in end turn"
     when 'End Game'
       exit_text(exit)
     when 'Roll'
-        roll_output = roll
-        move_player(player: player, move: roll_output[:dice_roll])
+      return_from_action = roll
+      unless player.in_jail
+        move_player(player: player, move: return_from_action[:dice_roll], move_to: nil)
+      end
+    when 'Pay Rent'
+      return_from_action = pay_rent(player)
     else
       puts "Invalid input"
     end
-    roll_output
+    return_from_action
   end
 
-  def players_current_information(player: )
-    #Below command should clear the board before displaying next puts statement but it is not working as anticipated
-    system 'clear'
-    puts  "Current player:            #{player.name}
-    Has:                   $#{player.cash}
-    Is on:                 #{BOARD[player.position].name}
-    Which costs:           #{BOARD[player.position].value}
-    this property owned by:#{BOARD[player.position].owner}"
+  def space_index(space_name:)
+    BOARD.each_with_index do |space, index|
+      if space.name == space_name
+        return index
+      end
+    end
   end
 
-  def turn (player)
-    has_rolled = false
+  def jail(player)
+    if player.in_jail
+      begin
+        puts "#{player.name} do you want to pay 50 and resume playing game? enter y/n"
+        pay_jail_price = gets.strip.to_s.downcase
+        if !(pay_jail_price == 'y' || pay_jail_price == 'n')
+          puts "Invalid choice please try again"
+        else
+          if pay_jail_price == 'y'
+            player.cash -= 50
+            player.in_jail = false
+          end
+        end
+      end until pay_jail_price == 'y' || pay_jail_price == 'n'
+    else
+      move_player(player: player, move: nil, move_to: 'Just Visiting')
+      player.in_jail = true
+      player.has_rolled = true
+      player.is_double = false
+      player.double_count = 0
+    end
+  end
+
+  def rail_road_rent(owner)
+    count = 0
+    BOARD.each do |space|
+      if (space.type == 'rail_road' && space.owner == owner)
+        count += 1
+      end
+    end
+    rent = count * 25
+    puts "#{owner} owns #{count} rail roads so rent is:#{rent}"
+    return rent
+  end
+
+  def pick_valid_choice(player, options)
+    begin
+      puts "Please pick one of the options available for you #{player.name}"
+      user_input = gets.strip
+      if user_input.to_i < 1 || user_input.to_i > options.length + 1
+        puts "Invalid choice please try again"
+      end
+    end until user_input.to_i.between?(1, options.length + 1)
+    user_input
+  end
+
+  def turn(player)
     begin
       players_current_information(player: player)
       properties_owned_by_player(player.name)
-      options = players_options(player: player, has_rolled: has_rolled)
-      begin
-        puts "Please pick one of the options available for you #{player.name}"
-        user_input = gets.strip
-        if user_input.to_i < 1 || user_input.to_i > options.length+1
-          puts "Invalid choice"
+      options = player_options(player)
+      user_input = pick_valid_choice(player, options)
+      action_out_put = actions(action: user_input, player: player, available_options: options)
+      #if output is true or false or nil then it is evident that output is not from roll
+      if !(action_out_put.is_a?(TrueClass) || action_out_put.is_a?(FalseClass) || action_out_put.nil?)
+        player.is_double = action_out_put[:is_double]
+        if (player.in_jail == true && player.is_double)
+          #Player come out of jail since he/she rolled double
+          player.in_jail = false
         end
-      end until user_input.to_i.between?(1, options.length+1)
-      roll_output = actions(action: user_input, player: player, available_options: options)
-      has_rolled = true unless (roll_output.nil? || roll_output[:is_double])
-    end until (options[user_input.to_i-1] == 'End Turn')
+        player.double_count += 1 if action_out_put[:is_double]
+        player.has_rolled = true
+      else
+        if !(action_out_put.nil?)
+          player.rent_payed = action_out_put
+        end
+      end
+      if player.double_count == 3
+        puts "You have rolled doubles 3 times in a row #{player.name}, so you are going to jail"
+        jail(player)
+      end
+    end until (options[user_input.to_i - 1] == 'End Turn') #|| player.double_count == 3)
   end
 
   def exit_text(user_input)
     exit if user_input.to_s.strip.downcase == 'exit'
   end
+
 end

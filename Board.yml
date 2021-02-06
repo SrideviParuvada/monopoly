@@ -1,109 +1,164 @@
+space_00:
+  name: 'GO'
+  type: space
+
 space_01:
   name: 'Mediterranean Avenue'
   type: property
   value: 60
+  rent: 2
 
 space_02:
   name: 'Baltic Avenue'
   type: property
   value: 60
+  rent: 4
 
 space_03:
+  name: 'Reading Railroad'
+  type: rail_road
+  value: 200
+  rent: 25
+
+space_04:
   name: 'Oriental Avenue'
   type: property
   value: 100
+  rent: 6
 
-space_04:
+space_05:
   name: 'Vermont Avenue'
   type: property
   value: 100
+  rent: 6
 
-space_05:
+space_06:
   name: 'Connecticut Avenue'
   type: property
   value: 120
+  rent: 8
 
-space_06:
+space_07:
+  name: 'Just Visiting'
+  type: space
+
+space_08:
   name: 'St.Charles Place'
   type: property
   value: 140
+  rent: 10
 
-space_07:
+space_09:
   name: 'States Avenue'
   type: property
   value: 140
+  rent: 10
 
-space_08:
+
+space_10:
   name: 'Virginia Avenue'
   type: property
   value: 160
+  rent: 12
 
-space_09:
+space_11:
+   name: 'Pennsylvania Railroad'
+   type: rail_road
+   value: 200
+   rent: 25
+
+space_12:
   name: 'St. James Place'
   type: property
   value: 180
+  rent: 14
 
-space_10:
+space_13:
   name: 'Tennessee Avenue'
   type: property
   value: 180
+  rent: 14
 
-space_11:
+space_14:
   name: 'New York Avenue'
   type: property
   value: 200
+  rent: 16
 
-space_12:
+space_15:
   name: 'Kentucky Avenue'
   type: property
   value: 220
+  rent: 18
 
-space_13:
+space_16:
   name: 'Indiana Avenue'
   type: property
   value: 220
+  rent: 18
 
-space_14:
+space_17:
   name: 'Illinois Avenue'
   type: property
   value: 240
+  rent: 20
 
-space_15:
+space_18:
+  name: 'B&O Railroad'
+  type: rail_road
+  value: 200
+  rent: 25
+
+space_19:
   name: 'Atlantic Avenue'
   type: property
   value: 260
+  rent: 22
 
-space_16:
+space_20:
   name: 'Ventnor Avenue'
   type: property
   value: 260
-
-space_17:
-   name: 'Marvin Gardens'
-   type: property
-   value: 280
-
-space_18:
-   name: 'Pacific Avenue'
-   type: property
-   value: 300
-
-space_19:
-   name: 'North Carolina Avenue'
-   type: property
-   value: 300
-
-space_20:
-   name: 'Pennsylvania Avenue'
-   type: property
-   value: 320
+  rent: 22
 
 space_21:
-   name: 'Park Place'
-   type: property
-   value: 350
+  name: 'Marvin Gardens'
+  type: property
+  value: 280
+  rent: 24
 
 space_22:
-   name: 'Boardwalk'
-   type: property
-   value: 400
+  name: 'Pacific Avenue'
+  type: property
+  value: 300
+  rent: 26
+
+space_23:
+  name: 'North Carolina Avenue'
+  type: property
+  value: 300
+  rent: 26
+
+space_24:
+  name: 'Pennsylvania Avenue'
+  type: property
+  value: 320
+  rent: 28
+
+space_25:
+  name: 'Short Line'
+  type: rail_road
+  value: 200
+  rent: 25
+
+space_26:
+  name: 'Park Place'
+  type: property
+  value: 350
+  rent: 35
+
+space_27:
+  name: 'Boardwalk'
+  type: property
+  value: 400
+  rent: 50
