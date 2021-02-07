@@ -17,7 +17,7 @@ class Player
   def initialize(name)
     @name = name
     @position = 0
-    @cash = 1500
+    @cash = 100
     @is_start = true
     @in_jail = false
     @has_rolled = false

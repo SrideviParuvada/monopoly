@@ -24,9 +24,17 @@ module Monopoly
     when 'End Game'
       exit_text(exit)
     when 'Roll'
-      return_from_action = roll
-      unless player.in_jail
-        move_player(player: player, move: return_from_action[:dice_roll], move_to: nil)
+      return_from_action = roll(player: player)
+      if (player.in_jail == true && player.is_double)
+        #Player come out of jail since he/she rolled double
+        move_player(player: player, move: return_from_action, move_to: nil)
+        player.in_jail = false
+        player.is_double = 0
+        puts "#{player.name} is out of jail as you rolled double"
+      else
+        if player.in_jail == false
+          move_player(player: player, move: return_from_action, move_to: nil)
+        end
       end
     when 'Pay Rent'
       return_from_action = pay_rent(player)
@@ -92,34 +100,19 @@ module Monopoly
 
   def turn(player)
     begin
-      players_current_information(player: player)
+      players_current_information(player)
       properties_owned_by_player(player.name)
       options = player_options(player)
       user_input = pick_valid_choice(player, options)
-      action_out_put = actions(action: user_input, player: player, available_options: options)
-      #if output is true or false or nil then it is evident that output is not from roll
-      if !(action_out_put.is_a?(TrueClass) || action_out_put.is_a?(FalseClass) || action_out_put.nil?)
-        player.is_double = action_out_put[:is_double]
-        if (player.in_jail == true && player.is_double)
-          #Player come out of jail since he/she rolled double
-          player.in_jail = false
-        end
-        player.double_count += 1 if action_out_put[:is_double]
-        player.has_rolled = true
-      else
-        if !(action_out_put.nil?)
-          player.rent_payed = action_out_put
-        end
-      end
+      actions(action: user_input, player: player, available_options: options)
       if player.double_count == 3
         puts "You have rolled doubles 3 times in a row #{player.name}, so you are going to jail"
         jail(player)
       end
-    end until (options[user_input.to_i - 1] == 'End Turn') #|| player.double_count == 3)
+    end until (options[user_input.to_i - 1] == 'End Turn')
   end
 
   def exit_text(user_input)
     exit if user_input.to_s.strip.downcase == 'exit'
   end
-
 end

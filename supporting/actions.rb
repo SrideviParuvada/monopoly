@@ -1,17 +1,16 @@
-def roll(min: 6, max: 6)
-  is_double = false
+def roll(min: 2, max: 2, player:player)
+  player.rent_payed = false
   num1 = rand(min..max)
   num2 = rand(min..max)
   puts "Dice 1: #{num1}"
   puts "Dice 2: #{num2}"
   total_roll = num1 + num2
   puts "Dice roll: #{total_roll}"
-  # if num1 == num2 then set double to true
   if num1 == num2
-    is_double = true
+    player.is_double = true
+    player.double_count += 1
   end
-  #{dice_roll: total_roll, is_double: num1 == num2 }
-  {dice_roll: total_roll, is_double: is_double}
+  total_roll
 end
 
 def buy_property(player)
@@ -29,14 +28,12 @@ def pay_rent(player)
   puts "#{player.name} is on #{BOARD[player.position].name} and it's rent is #{rent}"
   if player.cash < rent
     puts "#{player.name} doesn't have enough cash to pay rent"
-    rent_payed = false
   else
     owner_player = player_information(owner)
     owner_player.cash += rent
     player.cash -= rent
-    rent_payed = true
+    player.rent_payed = true
   end
-  rent_payed
 end
 
 def move_player(player:, move: nil, move_to: nil)
@@ -54,4 +51,5 @@ def move_player(player:, move: nil, move_to: nil)
   else
     player.position = space_index(space_name: move_to)
   end
+  player.has_rolled = true
 end

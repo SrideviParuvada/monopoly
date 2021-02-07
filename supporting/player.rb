@@ -1,4 +1,4 @@
-def players_current_information(player:)
+def players_current_information(player)
   #Below command should clear the board before displaying next puts statement but it is not working as anticipated
   system 'clear'
   puts "\nCurrent player:\t\t#{player.name}"
@@ -47,13 +47,17 @@ def player_options(player)
   property_value = BOARD[player.position].value
   owner = BOARD[player.position].owner
   space_type = BOARD[player.position].type
+  i_need_pay_rent = false
   property_owned_by_other_player = true if (owner != 'Banker' && owner != player.name && owner != 'nil')
   options = []
-  if (space_type == 'property' || space_type =='rail_road')
+  if (space_type == 'property' || space_type == 'rail_road')
     options << 'Buy' if (owner == 'Banker' && player.cash >= property_value && player.has_rolled)
-    (options << 'Pay Rent' && pay_rent = true) if (property_owned_by_other_player && player.rent_payed == false)
+    if (property_owned_by_other_player && player.rent_payed == false)
+      options << 'Pay Rent'
+      i_need_pay_rent = true
+    end
   end
-  options << 'Roll' if ((player.has_rolled == false || player.is_double) && pay_rent != true)
+  options << 'Roll' if ((player.has_rolled == false || player.is_double) && i_need_pay_rent == false)
   options << 'End Turn' if (player.has_rolled && (!player.is_double || player.in_jail) && (owner == 'Banker' || owner == player.name || player.rent_payed == true))
   options << 'End Game'
   puts "#{player.name}, you have following options to chose from"
