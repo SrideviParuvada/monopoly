@@ -1,0 +1,307 @@
+---
+space_0:
+  name: GO
+  type: space
+  value: 0
+  rent: 0
+  owner: Banker
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_1:
+  name: Mediterranean Avenue
+  type: property
+  value: 60
+  rent: 2
+  owner: Banker
+  color: Purple
+  mortgage: 0
+  is_mortgaged: false
+space_2:
+  name: Baltic Avenue
+  type: property
+  value: 60
+  rent: 4
+  owner: Banker
+  color: Purple
+  mortgage: 0
+  is_mortgaged: false
+space_3:
+  name: INCOME TAX
+  type: income_tax
+  value: 0
+  rent: 0
+  owner: Banker
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_4:
+  name: Reading Railroad
+  type: rail_road
+  value: 200
+  rent: 25
+  owner: Banker
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_5:
+  name: Oriental Avenue
+  type: property
+  value: 100
+  rent: 6
+  owner: Banker
+  color: Light Blue
+  mortgage: 0
+  is_mortgaged: false
+space_6:
+  name: Vermont Avenue
+  type: property
+  value: 100
+  rent: 6
+  owner: Banker
+  color: Light Blue
+  mortgage: 0
+  is_mortgaged: false
+space_7:
+  name: Connecticut Avenue
+  type: property
+  value: 120
+  rent: 8
+  owner: Sridevi
+  color: Light Blue
+  mortgage: 0
+  is_mortgaged: false
+space_8:
+  name: Just Visiting
+  type: space
+  value: 0
+  rent: 0
+  owner: Banker
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_9:
+  name: St.Charles Place
+  type: property
+  value: 140
+  rent: 10
+  owner: Chris
+  color: Magenta
+  mortgage: 0
+  is_mortgaged: false
+space_10:
+  name: Electric Company
+  type: utility
+  value: 150
+  rent: 0
+  owner: Banker
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_11:
+  name: States Avenue
+  type: property
+  value: 140
+  rent: 10
+  owner: Chris
+  color: Magenta
+  mortgage: 0
+  is_mortgaged: false
+space_12:
+  name: Virginia Avenue
+  type: property
+  value: 160
+  rent: 12
+  owner: Banker
+  color: Magenta
+  mortgage: 0
+  is_mortgaged: false
+space_13:
+  name: Pennsylvania Railroad
+  type: rail_road
+  value: 200
+  rent: 25
+  owner: Sridevi
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_14:
+  name: St. James Place
+  type: property
+  value: 180
+  rent: 14
+  owner: Chris
+  color: Orange
+  mortgage: 0
+  is_mortgaged: false
+space_15:
+  name: Tennessee Avenue
+  type: property
+  value: 180
+  rent: 14
+  owner: Sridevi
+  color: Orange
+  mortgage: 0
+  is_mortgaged: false
+space_16:
+  name: New York Avenue
+  type: property
+  value: 200
+  rent: 16
+  owner: Banker
+  color: Orange
+  mortgage: 0
+  is_mortgaged: false
+space_17:
+  name: FREE PARKING
+  type: space
+  value: 0
+  rent: 0
+  owner: Banker
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_18:
+  name: Kentucky Avenue
+  type: property
+  value: 220
+  rent: 18
+  owner: Banker
+  color: Red
+  mortgage: 0
+  is_mortgaged: false
+space_19:
+  name: Indiana Avenue
+  type: property
+  value: 220
+  rent: 18
+  owner: Banker
+  color: Red
+  mortgage: 110
+  is_mortgaged: false
+space_20:
+  name: Illinois Avenue
+  type: property
+  value: 240
+  rent: 20
+  owner: Banker
+  color: Red
+  mortgage: 0
+  is_mortgaged: false
+space_21:
+  name: B&O Railroad
+  type: rail_road
+  value: 200
+  rent: 0
+  owner: Banker
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_22:
+  name: Atlantic Avenue
+  type: property
+  value: 260
+  rent: 22
+  owner: Banker
+  color: Yellow
+  mortgage: 0
+  is_mortgaged: false
+space_23:
+  name: Ventnor Avenue
+  type: property
+  value: 260
+  rent: 22
+  owner: Sridevi
+  color: Yellow
+  mortgage: 0
+  is_mortgaged: false
+space_24:
+  name: Water Works
+  type: utility
+  value: 150
+  rent: 0
+  owner: Chris
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_25:
+  name: Marvin Gardens
+  type: property
+  value: 280
+  rent: 24
+  owner: Banker
+  color: Yellow
+  mortgage: 0
+  is_mortgaged: false
+space_26:
+  name: GO TO JAIL
+  type: space
+  value: 0
+  rent: 0
+  owner: Banker
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_27:
+  name: Pacific Avenue
+  type: property
+  value: 300
+  rent: 26
+  owner: Banker
+  color: Green
+  mortgage: 0
+  is_mortgaged: false
+space_28:
+  name: North Carolina Avenue
+  type: property
+  value: 300
+  rent: 26
+  owner: Chris
+  color: Green
+  mortgage: 0
+  is_mortgaged: false
+space_29:
+  name: Pennsylvania Avenue
+  type: property
+  value: 320
+  rent: 28
+  owner: Banker
+  color: Green
+  mortgage: 0
+  is_mortgaged: false
+space_30:
+  name: Short Line Railroad
+  type: rail_road
+  value: 200
+  rent: 25
+  owner: Banker
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_31:
+  name: Park Place
+  type: property
+  value: 350
+  rent: 35
+  owner: Banker
+  color: Blue
+  mortgage: 0
+  is_mortgaged: false
+space_32:
+  name: LUXURY TAX
+  type: luxury_tax
+  value: 0
+  rent: 0
+  owner: Banker
+  color:
+  mortgage: 0
+  is_mortgaged: false
+space_33:
+  name: Boardwalk
+  type: property
+  value: 400
+  rent: 50
+  owner: Banker
+  color: Blue
+  mortgage: 0
+  is_mortgaged: false

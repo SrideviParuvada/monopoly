@@ -1,0 +1,211 @@
+space_00:
+  name: 'GO'
+  type: space
+
+space_01:
+  name: 'Mediterranean Avenue'
+  type: property
+  value: 60
+  rent: 2
+  color: 'Purple'
+
+space_02:
+  name: 'Baltic Avenue'
+  type: property
+  value: 60
+  rent: 4
+  color: 'Purple'
+
+space_03:
+  name: 'INCOME TAX'
+  type: income_tax
+
+space_04:
+  name: 'Reading Railroad'
+  type: rail_road
+  value: 200
+  rent: 25
+
+space_05:
+  name: 'Oriental Avenue'
+  type: property
+  value: 100
+  rent: 6
+  color: 'Light Blue'
+
+space_06:
+  name: 'Vermont Avenue'
+  type: property
+  value: 100
+  rent: 6
+  color: 'Light Blue'
+
+space_07:
+  name: 'Connecticut Avenue'
+  type: property
+  value: 120
+  rent: 8
+  color: 'Light Blue'
+
+space_08:
+  name: 'Just Visiting'
+  type: space
+
+space_09:
+  name: 'St.Charles Place'
+  type: property
+  value: 140
+  rent: 10
+  color: 'Magenta'
+
+space_10:
+  name: 'Electric Company'
+  type: utility
+  value: 150
+
+space_11:
+  name: 'States Avenue'
+  type: property
+  value: 140
+  rent: 10
+  color: 'Magenta'
+
+space_12:
+  name: 'Virginia Avenue'
+  type: property
+  value: 160
+  rent: 12
+  color: 'Magenta'
+
+space_13:
+  name: 'Pennsylvania Railroad'
+  type: rail_road
+  value: 200
+  rent: 25
+
+space_14:
+  name: 'St. James Place'
+  type: property
+  value: 180
+  rent: 14
+  color: 'Orange'
+
+space_15:
+  name: 'Tennessee Avenue'
+  type: property
+  value: 180
+  rent: 14
+  color: 'Orange'
+
+space_16:
+  name: 'New York Avenue'
+  type: property
+  value: 200
+  rent: 16
+  color: 'Orange'
+
+space_17:
+  name: 'FREE PARKING'
+  type: space
+
+space_18:
+  name: 'Kentucky Avenue'
+  type: property
+  value: 220
+  rent: 18
+  color: 'Red'
+
+space_19:
+  name: 'Indiana Avenue'
+  type: property
+  value: 220
+  rent: 18
+  color: 'Red'
+  mortgage: 110
+
+space_20:
+  name: 'Illinois Avenue'
+  type: property
+  value: 240
+  rent: 20
+  color: 'Red'
+
+space_21:
+  name: 'B&O Railroad'
+  type: rail_road
+  value: 200
+
+space_22:
+  name: 'Atlantic Avenue'
+  type: property
+  value: 260
+  rent: 22
+  color: 'Yellow'
+
+space_23:
+  name: 'Ventnor Avenue'
+  type: property
+  value: 260
+  rent: 22
+  color: 'Yellow'
+
+space_24:
+  name: 'Water Works'
+  type: utility
+  value: 150
+
+space_25:
+  name: 'Marvin Gardens'
+  type: property
+  value: 280
+  rent: 24
+  color: 'Yellow'
+
+space_26:
+  name: 'GO TO JAIL'
+  type: space
+
+space_27:
+  name: 'Pacific Avenue'
+  type: property
+  value: 300
+  rent: 26
+  color: 'Green'
+
+space_28:
+  name: 'North Carolina Avenue'
+  type: property
+  value: 300
+  rent: 26
+  color: 'Green'
+
+space_29:
+  name: 'Pennsylvania Avenue'
+  type: property
+  value: 320
+  rent: 28
+  color: 'Green'
+
+space_30:
+  name: 'Short Line Railroad'
+  type: rail_road
+  value: 200
+  rent: 25
+
+space_31:
+  name: 'Park Place'
+  type: property
+  value: 350
+  rent: 35
+  color: 'Blue'
+
+space_32:
+  name: 'LUXURY TAX'
+  type: luxury_tax
+
+space_33:
+  name: 'Boardwalk'
+  type: property
+  value: 400
+  rent: 50
+  color: 'Blue'
