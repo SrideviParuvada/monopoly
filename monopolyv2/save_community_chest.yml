@@ -1,0 +1,49 @@
+---
+card_0:
+  name: Bank error in your favor
+  action: collect
+  additional_information: 200
+card_1:
+  name: Doctor’s fee
+  action: pay
+  additional_information: 50
+card_2:
+  name: From sale of stock you get $50
+  action: collect
+  additional_information: 50
+card_3:
+  name: Go to Jail
+  action: go_to_jail
+  additional_information: Go directly to jail, do not pass Go, do not collect $200
+card_4:
+  name: Holiday fund matures
+  action: collect
+  additional_information: 100
+card_5:
+  name: It is your birthday
+  action: collect_from_all_players
+  additional_information: 10
+card_6:
+  name: Life insurance matures
+  action: collect
+  additional_information: 100
+card_7:
+  name: Pay hospital fees of $100
+  action: pay
+  additional_information: 100
+card_8:
+  name: Pay school fees of $50
+  action: pay
+  additional_information: 50
+card_9:
+  name: Receive $25 consultancy fee
+  action: collect
+  additional_information: 25
+card_10:
+  name: You have won second prize in a beauty contest
+  action: collect
+  additional_information: 10
+card_11:
+  name: You inherit $100
+  action: collect
+  additional_information: 100

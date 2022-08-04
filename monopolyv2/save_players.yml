@@ -1,17 +1,17 @@
 ---
 player_0:
-  name: Sridevi
-  position: 14
-  cash: 740
-  is_start: true
+  name: Eesha
+  position: 5
+  cash: 320
+  is_start: false
   in_jail: false
   jail_roll_count: 0
-  roll_to_get_out_jail: false
+  status: Active
 player_1:
-  name: Chris
-  position: 11
-  cash: 590
-  is_start: true
+  name: Babbu
+  position: 2
+  cash: 500
+  is_start: false
   in_jail: false
   jail_roll_count: 0
-  roll_to_get_out_jail: false
+  status: Active

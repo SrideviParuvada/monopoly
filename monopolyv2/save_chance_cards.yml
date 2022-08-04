@@ -1,0 +1,13 @@
+---
+card_0:
+  name: Advance to Boardwalk. If you pass GO, collect $200.
+  action: move_to
+  additional_information: Boardwalk
+card_1:
+  name: Advance to GO. If you pass GO, collect $200.
+  action: move_to
+  additional_information: GO
+card_2:
+  name: Advance to Illinois Avenue. If you pass GO, collect $200.
+  action: move_to
+  additional_information: Illinois Avenue

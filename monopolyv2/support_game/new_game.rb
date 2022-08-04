@@ -10,22 +10,27 @@ def new_game
 
   @players = []
   names = []
-  name = ''
   number_of_players.times do |count|
     puts "What is the name of the player #{count + 1}?"
     begin
       name = gets.strip.to_s
       if names.include? name
         puts "Please enter different name as there is another player with name, '#{name}' already in the game"
-        name = ''
+        name = false
       else
         names << name
         @players << Player.new(name: name)
       end
-    end until (name != '')
+      end until name != false
   end
-
+  #Initiate new community chest and chance cards piles
+  # @community_chest = CardPile.new(file: 'Community_chest.yml')
+  # @chance_cards = CardPile.new(file: 'Chance_cards.yml')
+  # community = CardPile.new
+  #
+  #  @community_chest = community.load_file(file: 'Community_chest.yml')
+  #  @chance_cards = community.load_file(file: 'Chance_cards.yml')
   #Create new board
-  populate_board(file: 'Board.yml')
+  populate_file(file: 'Board.yml', class_name: BoardSpace)
 end
 

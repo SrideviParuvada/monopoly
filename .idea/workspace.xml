@@ -20,11 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8ae4249-6e06-4bb4-a6de-92b341d05285" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/monopolyv2/Chance_cards.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monopolyv2/Community_chest.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monopolyv2/support_game/README" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/classes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopoly_game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopoly_game.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_monopoly.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test_monopoly.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/Board.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/Board.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/monopoly_game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/monopoly_game.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/monopolyv2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/monopolyv2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/save_board.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/save_board.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/save_current_turn.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/save_current_turn.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/save_players.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/save_players.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/support_game/actions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/support_game/actions.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/support_game/classes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/support_game/classes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/support_game/helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/support_game/helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/support_game/load_game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/support_game/load_game.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/support_game/menu.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/support_game/menu.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/support_game/new_game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/support_game/new_game.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/support_game/player.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/support_game/player.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyv2/support_game/save_game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyv2/support_game/save_game.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +62,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -77,11 +93,14 @@
       <workItem from="1603075801729" duration="15648000" />
       <workItem from="1603216563865" duration="13000" />
       <workItem from="1603486515977" duration="10289000" />
+      <workItem from="1645591940157" duration="3000" />
+      <workItem from="1650931862504" duration="579000" />
+      <workItem from="1654095073475" duration="33000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

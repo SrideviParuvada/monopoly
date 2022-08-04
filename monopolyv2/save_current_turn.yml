@@ -1,7 +1,6 @@
 ---
-player: Sridevi
-has_rolled: true
-double_count: 0
-:total: 7
-:is_double: false
-debt: 14
+player: Babbu
+has_rolled: false
+double_count: 1
+:total: 2
+:is_double: true

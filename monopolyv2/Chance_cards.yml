@@ -1,0 +1,75 @@
+card_00:
+  name: 'Advance to Boardwalk. If you pass GO, collect $200.'
+  action: move_to
+  additional_information: 'Boardwalk'
+
+card_01:
+  name: 'Advance to GO. If you pass GO, collect $200.'
+  action: move_to
+  additional_information: 'GO'
+
+card_02:
+  name: 'Advance to Illinois Avenue. If you pass GO, collect $200.'
+  action: move_to
+  additional_information: 'Illinois Avenue'
+
+card_03:
+  name: 'From sale of stock you get $50'
+  action: collect
+  additional_information: 50
+
+##card_04:
+##  name: 'Get Out of Jail Free'
+##  action: move_to
+##  additional_information: 'GO'
+#
+card_05:
+  name: 'Go to Jail'
+  action: go_to_jail
+  additional_information: 'Go directly to jail, do not pass Go, do not collect $200'
+
+card_06:
+  name: 'Holiday fund matures'
+  action: collect
+  additional_information: 100
+
+card_07:
+  name: 'Income tax refund'
+  action: collect
+  additional_information: 20
+
+card_08:
+  name: 'It is your birthday'
+  action: collect_from_all_players
+  additional_information: 10
+
+card_09:
+  name: 'Life insurance matures'
+  action: collect
+  additional_information: 100
+
+card_10:
+  name: 'Pay hospital fees of'
+  action: pay
+  additional_information: 100
+
+card_11:
+  name: 'Pay school fees of'
+  action: pay
+  additional_information: 50
+
+card_12:
+  name: 'Receive $25 consultancy fee'
+  action: pay
+  additional_information: 25
+
+card_13:
+  name: 'You have won second prize in a beauty contest'
+  action: collect
+  additional_information: 10
+
+card_14:
+  name: 'You inherit'
+  action: collect
+  additional_information: 100
+

@@ -15,6 +15,7 @@ def save(data:, type:, file_name:)
   File.open(file_name, 'w') { |file| file.write(main_hash.to_yaml) }
 end
 
+
 def save_current_turn(current_turn:)
   main_hash = {}
   main_hash['player'] = current_turn.player.name
@@ -32,9 +33,10 @@ def save_current_turn(current_turn:)
   File.open('save_current_turn.yml', 'w') { |file| file.write(main_hash.to_yaml) }
 end
 
-
-def save_game(current_turn: current_turn)
+def save_game(current_turn:)
   save(data: BOARD, type: 'space', file_name: 'save_board.yml')
   save(data: @players, type: 'player', file_name: 'save_players.yml')
   save_current_turn(current_turn: current_turn)
+  save(data: @community_chest.base_cards, type: 'card', file_name: 'save_community_chest.yml')
+  save(data: @chance_cards.base_cards, type: 'card', file_name: 'save_chance_cards.yml')
 end

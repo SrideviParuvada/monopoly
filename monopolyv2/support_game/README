@@ -1,0 +1,2 @@
+How to run a test in debug mode?
+at terminal DEBUG=true ruby monopoly_game.rb

@@ -10,112 +10,128 @@ space_01:
   color: 'Purple'
 
 space_02:
+  name: 'Community Chest'
+  type: community_chest
+
+space_03:
   name: 'Baltic Avenue'
   type: property
   value: 60
   rent: 4
   color: 'Purple'
 
-space_03:
+space_04:
   name: 'INCOME TAX'
   type: income_tax
 
-space_04:
+space_05:
   name: 'Reading Railroad'
   type: rail_road
   value: 200
   rent: 25
 
-space_05:
+space_06:
   name: 'Oriental Avenue'
   type: property
   value: 100
   rent: 6
   color: 'Light Blue'
 
-space_06:
+space_07:
+  name: 'Chance'
+  type: chance_card
+
+space_08:
   name: 'Vermont Avenue'
   type: property
   value: 100
   rent: 6
   color: 'Light Blue'
 
-space_07:
+space_09:
   name: 'Connecticut Avenue'
   type: property
   value: 120
   rent: 8
   color: 'Light Blue'
 
-space_08:
+space_10:
   name: 'Just Visiting'
   type: space
 
-space_09:
+space_11:
   name: 'St.Charles Place'
   type: property
   value: 140
   rent: 10
   color: 'Magenta'
 
-space_10:
+space_12:
   name: 'Electric Company'
   type: utility
   value: 150
 
-space_11:
+space_13:
   name: 'States Avenue'
   type: property
   value: 140
   rent: 10
   color: 'Magenta'
 
-space_12:
+space_14:
   name: 'Virginia Avenue'
   type: property
   value: 160
   rent: 12
   color: 'Magenta'
 
-space_13:
+space_15:
   name: 'Pennsylvania Railroad'
   type: rail_road
   value: 200
   rent: 25
 
-space_14:
+space_16:
+  name: 'Community Chest'
+  type: community_chest
+
+space_17:
   name: 'St. James Place'
   type: property
   value: 180
   rent: 14
   color: 'Orange'
 
-space_15:
+space_18:
   name: 'Tennessee Avenue'
   type: property
   value: 180
   rent: 14
   color: 'Orange'
 
-space_16:
+space_19:
   name: 'New York Avenue'
   type: property
   value: 200
   rent: 16
   color: 'Orange'
 
-space_17:
+space_20:
   name: 'FREE PARKING'
   type: space
 
-space_18:
+space_21:
   name: 'Kentucky Avenue'
   type: property
   value: 220
   rent: 18
   color: 'Red'
 
-space_19:
+space_22:
+  name: 'Chance'
+  type: chance_card
+
+space_23:
   name: 'Indiana Avenue'
   type: property
   value: 220
@@ -123,87 +139,95 @@ space_19:
   color: 'Red'
   mortgage: 110
 
-space_20:
+space_24:
   name: 'Illinois Avenue'
   type: property
   value: 240
   rent: 20
   color: 'Red'
 
-space_21:
+space_25:
   name: 'B&O Railroad'
   type: rail_road
   value: 200
 
-space_22:
+space_26:
   name: 'Atlantic Avenue'
   type: property
   value: 260
   rent: 22
   color: 'Yellow'
 
-space_23:
+space_27:
   name: 'Ventnor Avenue'
   type: property
   value: 260
   rent: 22
   color: 'Yellow'
 
-space_24:
+space_28:
   name: 'Water Works'
   type: utility
   value: 150
 
-space_25:
+space_29:
   name: 'Marvin Gardens'
   type: property
   value: 280
   rent: 24
   color: 'Yellow'
 
-space_26:
+space_30:
   name: 'GO TO JAIL'
   type: space
 
-space_27:
+space_31:
   name: 'Pacific Avenue'
   type: property
   value: 300
   rent: 26
   color: 'Green'
 
-space_28:
+space_32:
   name: 'North Carolina Avenue'
   type: property
   value: 300
   rent: 26
   color: 'Green'
 
-space_29:
+space_33:
+  name: 'Community Chest'
+  type: community_chest
+
+space_34:
   name: 'Pennsylvania Avenue'
   type: property
   value: 320
   rent: 28
   color: 'Green'
 
-space_30:
+space_35:
   name: 'Short Line Railroad'
   type: rail_road
   value: 200
   rent: 25
 
-space_31:
+space_36:
+  name: 'Chance'
+  type: chance_card
+
+space_37:
   name: 'Park Place'
   type: property
   value: 350
   rent: 35
   color: 'Blue'
 
-space_32:
+space_38:
   name: 'LUXURY TAX'
   type: luxury_tax
 
-space_33:
+space_39:
   name: 'Boardwalk'
   type: property
   value: 400

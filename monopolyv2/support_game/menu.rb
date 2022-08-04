@@ -1,3 +1,5 @@
+require 'io/console'
+
 module Menu
 
   def menu(options:, title:, name:'')
@@ -15,7 +17,7 @@ module Menu
   def pick_valid_choice(options)
     begin
       user_input = gets.strip.to_i
-      # binding.pry
+      # user_input = STDIN.getch
       if user_input < 1 || user_input > options.length
         puts "user input : #{user_input} and option length: #{options.length}"
         puts 'Invalid choice please try again'
